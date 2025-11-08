@@ -1,0 +1,42 @@
+{
+  "en": {
+    "nav": {
+      "products": "Products",
+      "about": "About",
+      "luxe": "Luxe",
+      "collection": "Collection",
+      "contact": "Contact"
+    },
+    "hero": {
+      "headlines": [
+        ["Step Forward", "Walk in Style", "Stride Ahead", "Move with Flair", "Pace Yourself"],
+        ["Every Step", "Each Stride", "All Pacing", "Your Steps", "Every Walk"],
+        ["Counts", "Shines", "Valued", "Powers", "Speaks"]
+      ],
+      "button": "Explore Now",
+      "tagline": "Crafted for those who lead.",
+      "description1": "Experience unparalleled comfort with our premium collection designed for the modern individual. Each pair combines innovative technology with timeless craftsmanship to deliver exceptional performance and lasting style that elevates your every step.",
+      "description2": "Discover footwear that transforms your journey. Built with precision and attention to detail, our shoes redefine comfort and elegance."
+    }
+  },
+  "ar": {
+    "nav": {
+      "products": "المنتجات",
+      "about": "من نحن",
+      "luxe": "فاخر",
+      "collection": "المجموعة",
+      "contact": "اتصل بنا"
+    },
+    "hero": {
+      "headlines": [
+        ["خطوة للأمام", "امشِ بأناقة", "تقدّم بثقة", "تحرّك بأسلوب", "حدّد خطواتك"],
+        ["كل خطوة", "كل حركة", "كل سير", "خطواتك", "كل مشية"],
+        ["مهمة", "تتألق", "ذات قيمة", "تمنحك القوة", "تعبّر"]
+      ],
+      "button": "اكتشف الآن",
+      "tagline": "صُنعت لمن يقود.",
+      "description1": "استمتع براحة لا مثيل لها مع مجموعتنا الفاخرة المصممة للفرد العصري. يجمع كل زوج بين التكنولوجيا المبتكرة والحرفية الخالدة لتقديم أداء استثنائي وأسلوب دائم يرتقي بكل خطوة.",
+      "description2": "اكتشف الأحذية التي تحول رحلتك. مصنوعة بدقة واهتمام بالتفاصيل، أحذيتنا تعيد تعريف الراحة والأناقة."
+    }
+  }
+}

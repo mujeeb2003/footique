@@ -1,3 +1,82 @@
+// ===== TRANSLATION SYSTEM =====
+let translations = {};
+let currentLang = 'en';
+
+// Load translations
+fetch('./translations.json')
+    .then(response => response.json())
+    .then(data => {
+        translations = data;
+        // Check if user prefers Arabic (can be based on browser settings or saved preference)
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang) {
+            currentLang = savedLang;
+            setLanguage(currentLang);
+        }
+    })
+    .catch(error => console.error('Error loading translations:', error));
+
+// Function to get nested translation
+function getTranslation(key, lang) {
+    const keys = key.split('.');
+    let value = translations[lang];
+    
+    for (let k of keys) {
+        if (value && value[k] !== undefined) {
+            value = value[k];
+        } else {
+            return key; // Return key if translation not found
+        }
+    }
+    
+    return value;
+}
+
+// Function to update all translatable elements
+function updateTranslations(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getTranslation(key, lang);
+        element.textContent = translation;
+    });
+}
+
+// Function to set language and update UI
+function setLanguage(lang) {
+    currentLang = lang;
+    const html = document.documentElement;
+    
+    // Update HTML attributes
+    html.setAttribute('lang', lang);
+    html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    
+    // Update all translations
+    updateTranslations(lang);
+    
+    // Update language toggle button text
+    const langToggle = document.querySelector('.lang-text');
+    if (langToggle) {
+        langToggle.textContent = lang === 'en' ? 'عربي' : 'English';
+    }
+    
+    // Save preference
+    localStorage.setItem('preferredLang', lang);
+}
+
+// Language toggle button event
+document.addEventListener('DOMContentLoaded', function() {
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const newLang = currentLang === 'en' ? 'ar' : 'en';
+            setLanguage(newLang);
+        });
+    }
+});
+
+// ===== ORIGINAL ANIMATIONS =====
 function initAnimation(){
     gsap.to("#main",{
         z: '0',
