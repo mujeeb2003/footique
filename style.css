@@ -9,6 +9,11 @@
     font-family: 'tajawal';
     src: url('./fonts/Tajawal-Regular.woff2');
 }
+
+@font-face {
+    font-family: 'almarai-bold';
+    src: url('./fonts/Almarai-Bold.ttf');
+}
 [dir="rtl"] *{
     font-family: 'tajawal';
 }
@@ -145,6 +150,7 @@ a{
     position: relative;
 }
 #heroleft .h1s h1{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 100%;
     left:0;
@@ -156,14 +162,14 @@ a{
 }
 
 [dir="rtl"] #heroleft .h1s{
-    height: 9vw;
+    height: 8vw;
     /* text-align: right; */
 }
 /* RTL Support */
 [dir="rtl"] #heroleft .h1s h1 {
-    line-height: 1;
+    line-height: 1.4;
     font-weight: 600;
-    font-family: 'tajawal';
+    font-family: 'almarai-bold';
     font-size: 6vw;
     left: auto;
     right: 0;
@@ -175,7 +181,7 @@ a{
 
 [dir="rtl"] #heroright {
     align-items: flex-start !important;
-    text-align: left !important;
+    text-align: right !important;
 }
 
 
@@ -198,7 +204,7 @@ a{
 }
 
 [dir="rtl"] #heroleft button{
-    font-family: 'tajawal';
+    font-family: 'almarai-bold';
     font-size: 2vw;
 }
 
@@ -216,6 +222,10 @@ a{
     text-align: right;
     /* background-color: green; */
 } 
+
+[dir="rtl"] #hero #heroright{
+    text-align: left;
+}
 
 #heroright #imagediv {
     width: 100%;
