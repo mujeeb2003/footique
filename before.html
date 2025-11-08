@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baneosh - Premium Footwear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: transparent;
+            padding: 2rem 0;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-content {
+            z-index: 10;
+        }
+
+        .hero-content .tagline {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .hero-content h1 {
+            font-size: 72px;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .hero-content .subtitle {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .hero-content .description {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 480px;
+        }
+
+        .cta-button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 18px 50px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .cta-button:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+            transform: rotate(-15deg);
+        }
+
+        .shoe-gallery {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .shoe-gallery img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .shoe-gallery img:hover,
+        .shoe-gallery img.active {
+            opacity: 1;
+            border-color: #1a1a1a;
+        }
+
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                padding: 100px 40px 60px;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-image img {
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="./images/logo.png" alt="Baneosh Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Luxe</a></li>
+                <li><a href="#">Collection</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- <p class="tagline">Crafted for those who lead</p> -->
+                <h1>Step Forward<br>Every Step<br>Counts</h1>
+                <p class="subtitle">
+                    Experience unparalleled comfort with our premium collection designed 
+                    for the modern individual.
+                </p>
+                <p class="description">
+                    Each pair combines innovative technology with timeless craftsmanship 
+                    to deliver exceptional performance and lasting style that elevates 
+                    your every step.
+                </p>
+                <button class="cta-button">Explore Now</button>
+                
+                <div class="shoe-gallery">
+                    <img src="./images/shoe1.webp" alt="Shoe 1" class="active">
+                    <img src="./images/shoe2.webp" alt="Shoe 2">
+                    <img src="./images/shoe3.webp" alt="Shoe 3">
+                    <img src="./images/shoe4.webp" alt="Shoe 4">
+                    <img src="./images/shoe5.webp" alt="Shoe 5">
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./images/shoe1.webp" alt="Premium Footwear">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple image gallery switcher
+        const galleryImages = document.querySelectorAll('.shoe-gallery img');
+        const mainImage = document.querySelector('.hero-image img');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                galleryImages.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                mainImage.src = this.src;
+            });
+        });
+    </script>
+</body>
+</html>
